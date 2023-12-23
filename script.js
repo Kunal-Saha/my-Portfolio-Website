@@ -28,7 +28,7 @@ button5.addEventListener('click', function() {
 
 
 const yourEmail = 'sahakunal1803@gmail.com';
-    const cvLink = 'https://www.overleaf.com/read/vgtxpswpykch';
+    const cvLink = 'https://drive.google.com/drive/folders/10Iq0NzE5mcH3sZzw0Xay0exV6cWCkPEG';
 
     hireMe.addEventListener('click', function() {
         window.open(`mailto:${yourEmail}`, '_blank'); // Replace with your desired URL
