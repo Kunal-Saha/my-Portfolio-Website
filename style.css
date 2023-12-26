@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,10 +7,8 @@
 body{
     background-color: rgb(9, 9, 9);
     color: white;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Space Mono', monospace;
+    font-size: 18px;
     background-image: url(https://img.freepik.com/free-vector/black-technology-background_23-2149209062.jpg);
-    
 }
 
 header {
@@ -232,7 +232,6 @@ nav {
 
 .education .mark{
     color: #1f1f1f;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -299,87 +298,97 @@ nav {
 
 
 .skill-container {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 980px;
+    max-width: 1000px;
     margin: 20px auto;
-    padding: 20px;
-    background-color: #898a8e;
-    border-radius: 10px;
-    overflow: hidden; /* Add this to hide the overflow */
-}
-
-.skill-category {
-    margin-left: 30px;
-    margin-bottom: 15px;
-}
-
-.category-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.skill {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-}
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 80px;
-    background: linear-gradient(45deg, #2ae8e8, #5d758f);
+    gap: 20px; /* Vertical gap between rows */
+    padding: 20px;
+    background-color: #898a8e; /* Grey background for container */
     border-radius: 10px;
-    color: #fff;
-    font-size: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    position: relative;
-    overflow: hidden;
-}
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-category {
+    width: calc(33.33% - 20px); /* Adjust the width of categories */
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
-.box i {
-    margin-left: 10px;
-    opacity: 0.7;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.box:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.box:hover i {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.skill-name {
-    margin-left: 10px;
-    opacity: 0;
-    transform: translateY(0);
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.box:hover .skill-name {
-    opacity: 1;
-    transform: translateY(-50%);
-}
-
-.skill .box #ar:hover{
-    transform: scale(1.05);
-}
-
+  .skill-category .skill{
+    margin-bottom: 5px;
+  }
+  
+  .category-title {
+    font-size: 24px;
+    color: #fff; /* White color for category titles */
+    margin-bottom: 15px;
+  }
+  
+  .skill {
+    width: calc(100% - 30px); /* Adjust the width of skills */
+    background-color: #b3d9ff; /* Light blue color for boxes */
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+  }
+  
+  .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+    background-color: #66ccff; /* Change background color on hover */
+  }
+  
+  .skill-name {
+    font-size: 18px;
+    color: #444;
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Text pop-up effect and font size transition */
+  }
+  
+  .skill:hover .skill-name {
+    transform: translateY(-10px); /* Text pop-up effect on hover */
+    font-size: 20px; /* Increase font size on hover */
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .skill-container {
+      padding: 10px;
+    }
+  
+    .category-title {
+      font-size: 20px;
+    }
+  
+    .skill {
+      padding: 12px;
+    }
+  
+    .skill-name {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .skill-category {
+      width: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
+  
+    .category-title {
+      font-size: 18px;
+    }
+  
+    .skill {
+      padding: 10px;
+      width: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
+  
+    .skill-name {
+      font-size: 14px;
+    }
+  }
 .exp-container {
     display: flex;
     max-width: 1000px;
